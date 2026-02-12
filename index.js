@@ -143,7 +143,6 @@ Disfrútalo y comienza hoy 🚀`,
 const PORT = process.env.PORT || 3000;
 const URL = process.env.RAILWAY_STATIC_URL;
 
-bot.setWebHook(`${URL}/bot${process.env.TELEGRAM_TOKEN}`);
 
 app.post(`/bot${process.env.TELEGRAM_TOKEN}`, (req, res) => {
   bot.processUpdate(req.body);
