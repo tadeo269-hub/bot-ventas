@@ -6,7 +6,10 @@ const TelegramBot = require('node-telegram-bot-api');
 const app = express();
 app.use(express.json());
 
-const bot = new TelegramBot(process.env.TELEGRAM_TOKEN);
+const bot = new TelegramBot(process.env.TELEGRAM_TOKEN, {
+  polling: true
+});
+
 
 console.log('🤖 Bot de ventas activo');
 
